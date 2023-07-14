@@ -2,24 +2,26 @@
   "batch": {
     "processes": [
       {
-        "name": "chptrainmodelnb",
+        "name": "chptrainmodellg",
         "algorithmName": "main",
         "namespace": "",
         "algorithmTitle": {
-          "pt-br": "CHP Train Model NB",
-          "en-US": "CHP Train Model NB"
+          "pt-br": "CHP Train Model LG",
+          "en-US": "CHP Train Model LG"
         },
         "algorithmDescription": {
-          "pt-br": "CHP Train Model NB",
-          "en-US": "CHP Train Model NB"
+          "pt-br": "CHP Train Model LG",
+          "en-US": "CHP Train Model LG"
         },
         "instanceProperties": {
           "profile": "",
           "properties": {
-            "dockerImage": "chptrainmodelnb/chptrainmodelnb:1.0.0",
+            "dockerName": "chptrainmodellg",
             "instanceType": "c1.small"
           },
           "environments": {
+            "ENV": "PROD",
+            "LOCALSCHEDULER": "True"
           }
         }
       }
@@ -27,10 +29,10 @@
   },
   "docker": [
     {
-      "dockerName": "chptrainmodelnb",
+      "dockerName": "chptrainmodellg",
       "dockerTag": "1.0.0",
       "gitBranch": "main",
-      "gitPath": "/test",
+      "gitPath": "/chp",
       "instanceType": "c1.small",
       "gitDockerfileName": "Dockerfile",
       "gitRepoUrl": "https://github.com/chagasVinicius/california_house_mltutorial"

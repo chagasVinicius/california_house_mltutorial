@@ -7,4 +7,4 @@ RUN pip install -r requirements.txt
 
 ADD . /app
 
-CMD ["python3", "mlp_california.py"]
+CMD ["python3", "run.py"]
