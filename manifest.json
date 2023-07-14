@@ -30,7 +30,7 @@
       "dockerName": "chptrainmodelnb",
       "dockerTag": "1.0.0",
       "gitBranch": "main",
-      "gitPath": "/",
+      "gitPath": "/test",
       "instanceType": "c1.small",
       "gitDockerfileName": "Dockerfile",
       "gitRepoUrl": "https://github.com/chagasVinicius/california_house_mltutorial"
