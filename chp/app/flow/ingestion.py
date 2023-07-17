@@ -27,8 +27,8 @@ class IngestRecords(Task):
 
         logger.info(f'Reading data from {self.connector_name}/{self.staging_name}.')
 
-        data = stg.fetch_parquet(staging_name=staging_name,
-                                 connector_name = connector_nameter,
+        data = stg.fetch_parquet(staging_name=self.staging_name,
+                                 connector_name = self.connector_name,
                                  cds=True,
                                  columns=roi_cols)
 
