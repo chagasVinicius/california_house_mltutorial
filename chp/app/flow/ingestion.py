@@ -1,6 +1,6 @@
 from ..flow.commons import Task
 
-from pycarol import Carol, Staging, ApiKeyAuth, Storage
+from pycarol import Carol, Staging
 import luigi
 import logging
 
