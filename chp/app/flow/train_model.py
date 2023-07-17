@@ -33,8 +33,8 @@ class TrainModel(Task):
 
     # Recovering parameters from settings
     #-----------------------------------------
-    model_l2regularization = luigi.Parameter()
-    model_epochs = luigi.Parameter()
+    model_l2regularization = luigi.FloatParameter()
+    model_epochs = luigi.IntParameter()
 
     # Selecting how the output will be persis-
     # ted after the processing.
