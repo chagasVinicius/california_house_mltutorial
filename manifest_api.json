@@ -1,0 +1,38 @@
+{
+  "online": {
+    "processes": [
+      {
+        "name": "chpapi",
+        "algorithmName": "main",
+        "namespace": "",
+        "algorithmTitle": {
+          "pt-br": "CHP API",
+          "en-US": "CHP API"
+        },
+        "algorithmDescription": {
+          "pt-br": "CHP API",
+          "en-US": "CHP API"
+        },
+        "instanceProperties": {
+          "profile": "",
+          "properties": {
+            "dockerName": "chpapi",
+            "preemptible": false,
+            "instanceType": "c1.small"
+          }
+        }
+      }
+    ]
+  },
+  "docker": [
+    {
+      "dockerName": "chpapi",
+      "dockerTag": "1.0.0",
+      "gitBranch": "main",
+      "gitPath": "/api",
+      "instanceType": "c1.small",
+      "gitDockerfileName": "Dockerfile",
+      "gitRepoUrl": "https://github.com/chagasVinicius/california_house_mltutorial"
+    }
+  ]
+}

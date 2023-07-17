@@ -48,7 +48,8 @@ class TrainModel(Task):
         data = inputs[0]
 
         logger.info(f'Spliting train/ test portions of the data.')
-        X_cols =["AveRooms", "HouseAge", "Latitude", "MedInc", "AveOccup", "Longitude", "Population", "AveBedrms"]
+        X_cols =["AveRooms", "HouseAge", "Latitude", "MedInc", "AveOccup", "Longitude",
+                 "Population", "AveBedrms"]
         y_col = ["target"]
         X_train, X_test, y_train, y_test = train_test_split(data[X_cols],
                                                             data[y_col],
