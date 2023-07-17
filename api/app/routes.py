@@ -43,6 +43,7 @@ org_name = os.environ.get('CAROLORGANIZATION')
 functions = Functions(carol)
 
 # Loads the model saved in the storage from the app in which this model has been trained.
+global model
 logger.info('Loading model.')
 model = functions.load_model(model_filename, app_name, model_app_name)
 logger.info('Loading model: Done.')
@@ -177,8 +178,6 @@ def ping():
 @server_bp.route('/load_model', methods=['GET'])
 @requires_auth
 def load_model():
-    global model
-
     # We are loading the model from the app Storage
     logger.info('Loading model.')
     model = functions.load_model(model_filename, app_name, model_app_name)
@@ -220,7 +219,7 @@ def house_price():
     ave_bedrms = args['ave_bedrms']
 
     # We finally predict the price of the house using the model_predict method that we created in the functions class.
-    global model
+    # global model
     price = functions.model_predict(model, ave_rooms, house_age, latitude, med_inc, ave_occup, longitude,
                                     population, ave_bedrms)
 
