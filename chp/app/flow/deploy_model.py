@@ -32,7 +32,7 @@ class DeployModel(Task):
             login = Carol()
             login.app_name = self.deploy_app
             stg = Storage(login)
-            stg.save("chp_mlp_model.pkl", mlp_model, format='pikle')
+            stg.save("chp_mlp_model.pkl", mlp_model, format='pickle')
 
         else:
             logger.warn(f'Model didn\'t achieve the deployment requirements.')
