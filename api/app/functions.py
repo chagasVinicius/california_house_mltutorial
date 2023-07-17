@@ -59,8 +59,7 @@ class Functions:
                 float.
 
         '''
-        if model is None:
-            model = self.load_model()
+
         price = model.predict([[ave_rooms, house_age, latitude, med_inc, ave_occup, longitude,
                                 population, ave_bedrms]])
         return round(float(price), 2)
